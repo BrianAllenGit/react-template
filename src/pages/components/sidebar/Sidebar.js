@@ -6,39 +6,8 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import { mainLinkItems, secondaryLinkItems } from './NavigationLinks';
-
-const drawerWidth = 240;
-
-const styles = theme => ({
-  toolbarIcon: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: '0 8px',
-    ...theme.mixins.toolbar,
-  },
-  drawerPaper: {
-    position: 'relative',
-    whiteSpace: 'nowrap',
-    width: drawerWidth,
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  drawerPaperClose: {
-    overflowX: 'hidden',
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    width: theme.spacing.unit * 7,
-    [theme.breakpoints.up('sm')]: {
-      width: theme.spacing.unit * 9,
-    },
-  },
-});
+import { mainLinkItems } from './NavigationLinks';
+import styles from './SidebarStyles';
 
 class Sidebar extends React.Component {
 
@@ -60,8 +29,6 @@ class Sidebar extends React.Component {
         </div>
         <Divider />
         <List>{mainLinkItems}</List>
-        <Divider />
-        <List>{secondaryLinkItems}</List>
       </Drawer>
     );
   }

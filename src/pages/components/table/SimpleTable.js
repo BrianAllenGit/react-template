@@ -8,19 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-
-const styles = {
-  root: {
-    width: '100%',
-    overflowX: 'auto',
-  },
-  table: {
-    minWidth: 700,
-  },
-  tableContainer: {
-    height: 320,
-  },
-};
+import styles from './SimpleTableStyles';
 
 let id = 0;
 function createData(name, calories, fat, carbs, protein) {

@@ -9,6 +9,7 @@ import Tooltip from 'recharts/lib/component/Tooltip';
 import Legend from 'recharts/lib/component/Legend';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import styles from './SimpleLineChartStyles';
 
 const data = [
   { name: 'Mon', Visits: 2200, Orders: 3400 },
@@ -19,28 +20,6 @@ const data = [
   { name: 'Sat', Visits: 4390, Orders: 3800 },
   { name: 'Sun', Visits: 4490, Orders: 4300 },
 ];
-
-const styles = theme => ({
-  root: {
-    display: 'flex',
-  },
-  appBarSpacer: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing.unit * 3,
-    height: '100vh',
-    overflow: 'auto',
-  },
-  chartContainer: {
-    marginLeft: -22,
-  },
-  tableContainer: {
-    height: 320,
-  },
-  h5: {
-    marginBottom: theme.spacing.unit * 2,
-  },
-});
 
 function SimpleLineChart(props) {
   const { classes } = props;
